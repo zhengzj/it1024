@@ -30,7 +30,6 @@ public class BIOServerHandler implements Runnable{
              writer = new PrintWriter(socket.getOutputStream(),true);
             String body = null;
             while(true){
-                // 若客户端用的是 writer.print() 传值，那readerLine() 是不能获取值，细节
                 body = reader.readLine();
                 if (null == body) {
                     break;
